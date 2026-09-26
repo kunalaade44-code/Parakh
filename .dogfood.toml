@@ -1,0 +1,19 @@
+[portal]
+base_url = "http://127.0.0.1:8000"
+
+[tiers]
+claimed = ["T1", "T2"]
+pitch = "Dogfood hackathon portal with strict backend judge isolation, weighted rubric normalization engine, and real-time organizer monitoring."
+
+[auth]
+organizer   = "Cookie: session=org_7f2a"
+judge_a     = "Cookie: session=jdg_a_91bc"
+judge_b     = "Cookie: session=jdg_b_44de"
+participant = "Cookie: session=prt_2e88"
+
+[routes]
+gallery      = "/api/projects"
+submit       = "/api/projects/new"
+judge_scores = "/api/judge/scores"
+peer_scores  = "/api/judge/scores?judge=jdg_01"
+csv_export   = "/api/export.csv"

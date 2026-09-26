@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF9F1C" />
+      <stop offset="100%" stop-color="#F76B15" />
+    </linearGradient>
+    <linearGradient id="darkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+  </defs>
+
+  <!-- Left Stem of P -->
+  <path d="M 80 60 L 170 60 L 170 440 L 80 440 Z" fill="url(#darkGrad)" />
+  
+  <!-- Orange Diagonal Ribbons inside P stem -->
+  <path d="M 80 160 L 170 100 L 170 190 L 80 250 Z" fill="#FFA500" />
+  <path d="M 80 250 L 170 190 L 170 330 L 80 390 Z" fill="url(#orangeGrad)" />
+  <path d="M 80 390 L 170 330 L 170 370 L 80 440 Z" fill="#0F172A" />
+
+  <!-- Outer Upper Curve of P & R Leg Shape -->
+  <path d="M 170 60 L 320 60 C 420 60 440 160 440 230 C 440 310 390 350 310 350 L 170 350 Z" fill="url(#darkGrad)" />
+
+  <!-- Magnifying Glass / Circular Cutout -->
+  <circle cx="280" cy="220" r="105" fill="#FFFFFF" />
+  
+  <!-- Code Icon </ > inside the glass -->
+  <!-- Left angle bracket < -->
+  <path d="M 255 180 L 215 220 L 255 260" fill="none" stroke="#F76B15" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Slash / -->
+  <path d="M 290 165 L 265 275" fill="none" stroke="#F76B15" stroke-width="20" stroke-linecap="round" />
+  <!-- Right angle bracket > -->
+  <path d="M 305 180 L 345 220 L 305 260" fill="none" stroke="#F76B15" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Magnifier Handle projecting out to form R's leg -->
+  <path d="M 340 290 L 420 390 C 435 410 425 435 400 440 C 380 445 365 430 350 410 L 305 325 Z" fill="url(#orangeGrad)" />
+</svg>

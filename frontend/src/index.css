@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #080604;
+    --text-main: #FDF4EB;
+    --accent-orange: #F97316;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+/* Light Theme Styling */
+.light-mode {
+  --bg-main: #FAFAF8;
+  --text-main: #1C1917;
+  background-color: #FAFAF8 !important;
+  color: #1C1917 !important;
+}
+
+.light-mode .glass-panel {
+  background: #FFFFFF !important;
+  border: 1px solid #F3ECE4 !important;
+  box-shadow: 0 4px 20px -4px rgba(249, 115, 22, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.04) !important;
+}
+
+.light-mode .glass-card {
+  background: #FFFFFF !important;
+  border: 1.5px solid #F5ECE3 !important;
+  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.05) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 4-sided Reddish Glow on Hover */
+.light-mode .glass-card:hover {
+  border-color: #EF4444 !important;
+  transform: translateY(-4px);
+  box-shadow: 0 0 22px rgba(239, 68, 68, 0.28), 0 0 8px rgba(239, 68, 68, 0.18) !important;
+}
+
+.light-mode .hero-banner {
+  background: linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 50%, #FED7AA 100%) !important;
+  border: 1.5px solid #FDBA74 !important;
+}
+
+.light-mode .input-box {
+  background-color: #FFFFFF !important;
+  border: 1.5px solid #E7DCD2 !important;
+  color: #1C1917 !important;
+}
+
+.light-mode .input-box::placeholder {
+  color: #A8A29E !important;
+}
+
+.light-mode .sub-card {
+  background-color: #FAF5F0 !important;
+  border: 1px solid #EFE4D8 !important;
+}
+
+.light-mode .navbar-blur {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-bottom: 1px solid #F0E6DC !important;
+}
+
+.light-mode .table-header {
+  background-color: #FDF9F5 !important;
+  color: #EA580C !important;
+}
+
+.light-mode .table-row:hover {
+  background-color: #FFF7ED !important;
+}
+
+/* Dark Theme Styling */
+.dark-mode {
+  --bg-main: #080604;
+  --text-main: #FDF4EB;
+  background-color: #080604 !important;
+  color: #FDF4EB !important;
+}
+
+.dark-mode .glass-panel {
+  background: rgba(22, 17, 13, 0.85);
+  border: 1px solid rgba(249, 115, 22, 0.18);
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.7);
+}
+
+.dark-mode .glass-card {
+  background: linear-gradient(145deg, rgba(28, 20, 15, 0.75) 0%, rgba(16, 12, 9, 0.9) 100%);
+  border: 1px solid rgba(251, 146, 60, 0.14);
+  box-shadow: 0 12px 35px -12px rgba(0, 0, 0, 0.6);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 4-sided Reddish Glow on Hover for Dark Mode */
+.dark-mode .glass-card:hover {
+  border-color: #EF4444 !important;
+  transform: translateY(-4px);
+  box-shadow: 0 0 28px rgba(239, 68, 68, 0.45), 0 0 10px rgba(239, 68, 68, 0.3) !important;
+}
+
+.dark-mode .hero-banner {
+  background: linear-gradient(135deg, rgba(67, 26, 7, 0.5) 0%, #19110B 50%, rgba(120, 53, 15, 0.3) 100%);
+  border: 1px solid rgba(249, 115, 22, 0.3);
+}
+
+.dark-mode .input-box {
+  background-color: #0D0A07;
+  border: 1px solid rgba(249, 115, 22, 0.25);
+  color: #FDF4EB;
+}
+
+.dark-mode .sub-card {
+  background-color: #0D0A07;
+  border: 1px solid rgba(249, 115, 22, 0.15);
+}
+
+.dark-mode .navbar-blur {
+  background: rgba(14, 10, 7, 0.92);
+  border-bottom: 1px solid rgba(249, 115, 22, 0.15);
+}
+
+.dark-mode .table-header {
+  background-color: #0D0A07;
+  color: #FB923C;
+}
+
+.dark-mode .table-row:hover {
+  background-color: rgba(249, 115, 22, 0.08);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #F97316;
+  border-radius: 4px;
+}

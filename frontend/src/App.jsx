@@ -9,7 +9,7 @@ import {
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
-const API_BASE = '/api';
+const API_BASE = import.meta.env.VITE_API_BASE || '/api';
 
 export default function App() {
   const [theme, setTheme] = useState('light'); // 'light' or 'dark'

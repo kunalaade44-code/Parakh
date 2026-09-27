@@ -2,7 +2,10 @@ import os
 from pydantic_settings import BaseSettings
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-DEFAULT_DB_PATH = os.path.join(BASE_DIR, "dogfood.db")
+if os.getenv("VERCEL"):
+    DEFAULT_DB_PATH = "/tmp/dogfood.db"
+else:
+    DEFAULT_DB_PATH = os.path.join(BASE_DIR, "dogfood.db")
 
 class Settings(BaseSettings):
     PROJECT_NAME: str = "Dogfood Hackathon Platform"

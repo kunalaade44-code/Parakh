@@ -4,8 +4,13 @@ from app.core.config import settings
 from app.core.database import engine, Base
 from app.api.routes import router as api_router
 
-# Create database tables
-Base.metadata.create_all(bind=engine)
+import app.models.models
+
+# Create database tables safely
+try:
+    Base.metadata.create_all(bind=engine)
+except Exception as e:
+    print(f"Database table creation notice: {e}")
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
